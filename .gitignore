@@ -1,0 +1,17 @@
+# 依赖
+node_modules/
+
+# 本地运行/测试产生的临时文件
+*.log
+.overlay-state.json
+test/.*.json
+test/.*.json.log
+test/*.png
+test/*.log
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

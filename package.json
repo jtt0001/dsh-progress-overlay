@@ -1,0 +1,58 @@
+{
+  "name": "dsh-progress-overlay",
+  "version": "0.1.2",
+  "description": "Windows always-on-top task progress overlay for DeepSeek Harness (DSH): live phase, tool or command, real todo step progress, multi-task list, and approvals answered from the overlay.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "resources/",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.2-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "node resources/build.ps1",
+    "test": "node test/state.test.js && node test/smoke-apply.mjs",
+    "measure": "node test/measure-overlay.mjs",
+    "check": "node --check lib/index.js && node --check lib/state.js && node --check lib/config.js"
+  },
+  "dependencies": {
+    "schemastery": "^3.18.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "os": [
+    "win32"
+  ],
+  "author": "jtt0001",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "overlay",
+    "windows",
+    "progress",
+    "always-on-top"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtt0001/dsh-progress-overlay.git"
+  },
+  "homepage": "https://github.com/jtt0001/dsh-progress-overlay#readme",
+  "bugs": {
+    "url": "https://github.com/jtt0001/dsh-progress-overlay/issues"
+  }
+}

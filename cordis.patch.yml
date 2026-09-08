@@ -1,0 +1,4 @@
+# dsh-progress-overlay: boot row (kept ASCII; profile tooling reads this on any code page)
+- insert:
+    - id: dsh-progress-overlay
+      name: dsh-progress-overlay
